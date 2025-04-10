@@ -1,0 +1,63 @@
+.recipe-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+}
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+input, textarea {
+  margin: 5px;
+  padding: 8px;
+  width: 100%;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.font-gim-nightshade {
+  font-family: 'Gim NightShade';
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.md-0 {
+  margin: 0;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
