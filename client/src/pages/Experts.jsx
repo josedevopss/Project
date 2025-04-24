@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { API_URL } from "../utils/api";
 
 function Main() {
   const [chefs, setChefs] = useState([]);
@@ -9,7 +10,7 @@ function Main() {
   const fetchChefs = async () => {
     try { 
       // Note: endpoint matches router's GET route: /api/chef
-      const response = await axios.get("http://localhost:8000/api/chef");
+      const response = await axios.get(`${API_URL}/chef/chefs`);
       setChefs(response.data);
     } catch (error) {
       console.error("Error fetching chefs:", error);

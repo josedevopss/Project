@@ -16,6 +16,8 @@ const LoginIt = () => {
     try {
       const response = await axios.post("http://localhost:8000/api/v1/auth/login", formData, { withCredentials: true });
       setMessage(response.data.message);
+      
+      localStorage.setItem("token", response.data.token);
 
       if (response.data.success) {
         navigate("/");

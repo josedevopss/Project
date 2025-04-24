@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Public GET endpoint (for approved chefs only)
-// router.get("/", getChefs);
+router.get("/chefs", getChefs);
 
 // Admin endpoints:
 // GET all chef applications (pending & approved)

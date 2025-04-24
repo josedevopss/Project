@@ -9,6 +9,7 @@ import recipeRoutes from './routes/recipeRoutes.js'
 import recipeDataRoutes from './routes/recipeDataRoutes.js'
 import applyRoutes from './routes/Chef.js'; // Import apply routes
 import path from 'path';
+import bookingRoutes from './routes/bookings.js'; // Import booking routes
 import adminRoutes from "./routes/adminRoutes.js";
 
 import { fileURLToPath } from "url";
@@ -66,7 +67,7 @@ app.use("/api/recipes", recipeRoutes);
 app.use("/api/recipesData", recipeDataRoutes);
 app.use('/api/v1/users', usersRoutes);
 app.use("/api/chef", applyRoutes);
-
+app.use('/api/bookings', bookingRoutes);
 app.use("/api/admin", adminRoutes);
 
 
