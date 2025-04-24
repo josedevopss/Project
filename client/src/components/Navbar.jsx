@@ -20,9 +20,9 @@ const Navbar = () => {
 
       {/* Main Navigation */}
       <div className="font-roboto">
-        <header className="border-b">
+        <header className="border-b ">
           <div className="container mx-auto flex justify-between items-center py-4">
-            <div className="text-red-600 text-3xl font-bold">Global Bites</div>
+            <div className="text-red-600  text-3xl font-bold">Global Bites</div>
             <div className="flex space-x-4">
               <Link
                 to="/recipe"

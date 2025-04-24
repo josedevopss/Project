@@ -8,11 +8,13 @@ const Recipe = ({ recipe }) => {
     <div className="bg-white text-gray-900 p-8 mb-8 shadow-lg rounded-lg">
       <div className="container mx-auto">
         <h1 className="text-3xl font-bold mb-4 text-center">{recipe.name}</h1>
-        <img
-          src={recipe.image}
-          alt={recipe.name}
-          className="w-64 h-64 object-cover mb-4 mx-auto rounded-lg"
-        />
+        {recipe.image && (
+          <img
+            src={recipe.image}
+            alt={recipe.name}
+            className="w-64 h-64 object-cover mb-4 mx-auto rounded-lg"
+          />
+        )}
         <h2 className="text-2xl font-semibold mb-2">Ingredients</h2>
         <ul className="list-disc list-inside mb-4">
           {recipe.ingredients.map((ingredient, index) => (

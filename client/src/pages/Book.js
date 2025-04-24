@@ -112,23 +112,7 @@ const App = () => {
   return (
     <div className="bg-white min-h-screen text-black">
       {/* Navbar */}
-      <nav className="bg-[#5c195c] text-white p-4 flex justify-between items-center shadow-lg">
-        <h1 className="text-2xl font-bold">Chef Booking</h1>
-       <div className="md:mt-2 flex space-x-2">
-                 <Link to="/apply" className="bg-white text-black hover:bg-red-600 px-4 py-2 rounded mt-1 transition duration-300 ease-in-out transform hover:scale-105">Apply</Link>
-               </div>
-      </nav>
-
-      {/* Scrolling Text */}
-      <section className=" bg-[#942894] py-4">
-        <div className="overflow-hidden">
-          <div className="whitespace-nowrap animate-marquee py-2 text-white">
-            <span className="px-8">👨‍🍳We offer the best chefs for your events!</span>
-            <span className="px-8">🏠Book a professional chef today!</span>
-            <span className="px-8">🍽️Make your occasion memorable with expert chefs!</span>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Booking Form (Hidden Initially) */}
       {showBookingForm && selectedChef && (
@@ -237,36 +221,6 @@ const App = () => {
         </div>
       </section>
       
-      <footer class="bg-gray-900 text-white py-10">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          <div>
-            <h2 class="text-2xl font-bold">Chef's Delight</h2>
-            <p class="mt-2 text-gray-400">Bringing you the best recipes and culinary experiences.</p>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
-            <ul class="space-y-2">
-              <li><a href="#" class="hover:text-yellow-400">Home</a></li>
-              <li><a href="chefacademy" class="hover:text-yellow-400">About</a></li>
-              <li><a href="Recipes" class="hover:text-yellow-400">Recipes</a></li>
-              <li><a href="chefacademy" class="hover:text-yellow-400">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold mb-3">Contact Us</h3>
-            <p class="text-gray-400">Email: contact@chefdelight.com</p>
-            <p class="text-gray-400">Phone: +123 456 7890</p>
-            <div class="mt-4 flex justify-center md:justify-start space-x-4">
-              <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="text-gray-400 hover:text-yellow-400 text-2xl"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-8 text-gray-500">
-          <p>&copy; 2025 Chef's Delight. All Rights Reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };

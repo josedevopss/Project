@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
 const restaurants = [
     { id: 1, name: "Briyani", image: "https://www.shutterstock.com/image-photo/hyderabadi-chicken-biryani-aromatic-flavorful-600nw-2497040151.jpg", rating: 8.5 },
     { id: 2, name: "Special Dosa", image: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRvc2F8ZW58MHx8MHx8fDA%3D", rating: 4.2 },
@@ -14,7 +12,7 @@ const menuItems = [
     // first id 1
   { id: 1, name: "Dham Biriyani",     price: 150, restaurantId: 1 },
   { id: 2, name: "Mattan Briyani",    price: 250, restaurantId: 1 },
-    { id: 3, name: "Hyderabadi Biriyani",      price: 200, restaurantId: 1 },
+    { id: 3, name: "Hyderabadi Biriyani",   price: 200, restaurantId: 1 },
     { id: 4, name: " Awadhi Biriyani",         price: 300, restaurantId: 1 },
     { id: 5, name: " Kolkata Biriyani", price: 100, restaurantId: 1 },
     { id: 6, name: "Malabar biryani", price: 350, restaurantId: 1 },
@@ -29,7 +27,7 @@ const menuItems = [
     { id: 5, name: "Onion Dosa", price: 100, restaurantId: 2 },
     { id: 6, name: "Ghee Roast", price: 350, restaurantId: 2 },
     { id: 3, name: "Rava Dosa", price: 200, restaurantId: 2 },
-    { id: 4, name: "Mysore Masala Dosa", price: 300, restaurantId: 2 },
+    { id: 4, name: "Mysore Dosa", price: 300, restaurantId: 2 },
     {id: 5, name: "Neer Dosa", price: 100, restaurantId: 2 },
     { id: 6, name: "Set Dosa", price: 350, restaurantId: 2 },
     
@@ -118,25 +116,7 @@ const FoodOrderApp = () => {
 
   return (
     <div>
-      <header className="bg-[#5e175e] text-white p-4 flex flex-col md:flex-row justify-between items-center shadow-lg">
-        <p className="ml-20 mt-2 md:mt-0 md:ml-5 text-center text-3xl font-bold md:text-left">
-          Order Home Food 
-        </p>
-        <div className="flex space-x-4">
-          <div className="relative group">
-            <Link to="/" className="underline font-bold text-white">Home</Link>
-          </div>
-          <div className="relative group">
-            <Link to="/Recipes" className="text-white underline font-bold">Recipes</Link>
-          </div>
-          <div className="flex space-x-4">
-            <Link to="/chefacademy" className="text-white text-font-bold underline font-bold">Contact</Link>
-          </div>
-          <div className="flex space-x-4">
-            <Link to="/experts" className="text-white text-font-bold underline font-bold">Cook Experts</Link>
-          </div>
-        </div>
-      </header>
+   
       <div className="p-6">
         {/* Restaurant Listing */}
         {!selectedRestaurant ? (
@@ -215,36 +195,7 @@ const FoodOrderApp = () => {
           </div>
         )}
       </div>
-      <footer className="bg-gray-900 text-white py-10">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          <div>
-            <h2 className="text-2xl font-bold">Chef's Delight</h2>
-            <p className="mt-2 text-gray-400">Bringing you the best recipes and culinary experiences.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-3">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-yellow-400">Home</a></li>
-              <li><a href="chefacademy" className="hover:text-yellow-400">About</a></li>
-              <li><a href="Recipes" className="hover:text-yellow-400">Recipes</a></li>
-              <li><a href="chefacademy" className="hover:text-yellow-400">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-3">Contact Us</h3>
-            <p className="text-gray-400">Email: contact@chefdelight.com</p>
-            <p className="text-gray-400">Phone: +123 456 7890</p>
-            <div className="mt-4 flex justify-center md:justify-start space-x-4">
-              <a href="#" className="text-gray-400 hover:text-yellow-400 text-2xl"><i className="fab fa-facebook"></i></a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400 text-2xl"><i className="fab fa-instagram"></i></a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400 text-2xl"><i className="fab fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-        <div className="text-center mt-8 text-gray-500">
-          <p>&copy; 2025 Chef's Delight. All Rights Reserved.</p>
-        </div>
-      </footer>
+    
     </div>
   );
 };
